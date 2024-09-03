@@ -1,0 +1,48 @@
+.Container{
+    max-width: 1400px;
+    padding: 5px;
+}
+
+.ContainerXL{
+    max-width: 1600px;
+    padding: 3px;
+}
+
+.CenterView{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Card{
+    width:250px;
+    height: 320px;
+    gap: 16px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.Card:hover{
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+.CardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    background-color: rgb(59 130 246);
+    color: white;
+    width: 100%;
+}
