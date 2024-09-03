@@ -130,6 +130,10 @@ docker-compose -f docker-compose.initial.yml up --build -d
 ### solution
 
 > explain briefly your solution for this problem here
+- Created two tables User and Home adding distinct values to each
+- Related both the tables with their ID as foreign key
+- dropped the old home table as it was no longer utilised
+
 
 ## 2. React SPA
 
@@ -221,6 +225,14 @@ docker-compose -f docker-compose.initial.yml up --build -d
 ### solution
 
 > explain briefly your solution for this problem here
+- used react vite to as starter kit
+- redux is used for state management
+- page starts with user selection 
+- upon selecting user all property is listed in card format
+- each card is interactable and allows one to select or deselect users
+- the page is responsive and uses container logic for wide screen and gird logic for 
+  regular screen size
+- loading state is used to allow skeleton based loading screen
 
 ## 3. Backend API development on Node
 
@@ -282,6 +294,10 @@ docker-compose -f docker-compose.initial.yml up --build -d
 ### solution
 
 > explain briefly your solution for this problem here
+- used node with express (could have used nest but express is quicker for small use cases)
+- for db used prisma could have used TypeORM as well but again for quick deployment prisma is  preferred
+- added all the required api and the routes in RESTFul way, All api communicate in JSON response only. 
+- Since ORM is utilized, need of data sanitization is low and is sufficient at this level.
 
 ## Submission Guidelines
 

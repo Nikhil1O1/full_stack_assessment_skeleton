@@ -42,9 +42,9 @@ const HomesForUser = () => {
       <div className="CenterView">
         <div className='Container'>
           {isLoading ? (
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               {Array(3).fill(null).map((_, index) => (
-                <div key={index} className="border p-4 rounded">
+                <div key={index} className="Card">
                   <Skeleton height={25} width="100%" />
                   <Skeleton height={18} />
                   <Skeleton height={18} count={3} />
@@ -85,7 +85,7 @@ const HomesForUser = () => {
           <EditUserModal
             home={editingHome}
             onClose={() => setEditingHome(null)}
-            onUpdate={handleUpdate} // Pass the update handler
+            onUpdate={handleUpdate}
           />
         )}
       </div>

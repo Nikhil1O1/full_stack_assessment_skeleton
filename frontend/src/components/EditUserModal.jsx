@@ -35,10 +35,10 @@ const EditUserModal = ({ home, onClose, onUpdate }) => {
   if (usersLoading || homeUsersLoading) return <p>Loading...</p>;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div className="fixed inset-0 frostedBack bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white p-4 rounded">
         <h2>Edit Users for {home.street_address}</h2>
-        <div className="mt-4">
+        <div className="mt-4 checkBoxModal">
           {users.map((user) => (
             <label
               key={user.id}
@@ -53,14 +53,14 @@ const EditUserModal = ({ home, onClose, onUpdate }) => {
             </label>
           ))}
         </div>
-        <div className="mt-4 d-flex flex-direction-row align-items-end">
-        <button onClick={onClose} className="p-2 bg-gray-500 text-white rounded">
+        <div className="mt-4 modalButtons">
+          <button onClick={onClose} className="p-2 bg-gray-500 text-white rounded scaleAnimation">
             Cancel
           </button>
           <button
             onClick={handleSave}
-            disabled={!enableSave}
-            className="mr-2 p-2 bg-blue-500 text-white rounded disabled:opacity-50"
+            disabled={!enableSave || !selectedUsers.length >= 1}
+            className="mr-2 p-2 bg-blue-500 text-white rounded disabled:opacity-50 scaleAnimation"
           >
             Save
           </button>
